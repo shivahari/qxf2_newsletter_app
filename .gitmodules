@@ -1,0 +1,3 @@
+[submodule "newsletter_automation"]
+	path = newsletter_automation
+	url = https://github.com/qxf2/newsletter_automation.git
