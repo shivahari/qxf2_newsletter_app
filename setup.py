@@ -7,7 +7,7 @@ with open('./newsletter_automation/README.md', 'r', encoding='utf=8') as fh:
 
 setuptools.setup(
         name = 'newsletter_automation',
-        version = '0.0.1',
+        version = '0.0.2',
         author = 'Sravanti Tatiraju, Indira Nellutla, Preedhi Vivek, Rohan Dudam, Shivahari Pitchaikkannu',
         author_email = 'sravanti.tatiraju@qxf2.com, indira@qxf2.com, preedhi.vivek@qxf2.com, rohan@qxf2.com, shivahari@qxf2.com',
         description = 'A Qxf2 Newsletter automation app',
@@ -26,6 +26,7 @@ setuptools.setup(
             'Flask',
             'Flask-WTF',
             'flask-sqlalchemy',
+            'pytz',
             'mailchimp-marketing==3.0.44'],
         python_requires = '>=3.8'
         )
