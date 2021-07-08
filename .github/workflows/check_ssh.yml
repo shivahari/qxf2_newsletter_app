@@ -1,0 +1,25 @@
+name: Check SSH
+on:
+  push:
+    branches:
+      - add_github_workflow
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+            #- uses: actions/checkout@v2
+    - name: Check SSH
+
+      # Set env vars
+      env:
+              HOST: ${{ secrets.HOST }}
+              USERNAME: ${{ secrets.USERNAME }}
+      run: |
+              #check SSH
+              echo "${{ secrets.KEY }}" > secret.pem
+              cat secret.pem
+              echo "foo" > foo
+              chmod 400 secret.pem
+
+              # Copy the Python Dist to remote server
+              scp -o StrictHostKeyChecking=no -i secret.pem ./foo "$USERNAME"@"$HOST":/home/ubuntu
