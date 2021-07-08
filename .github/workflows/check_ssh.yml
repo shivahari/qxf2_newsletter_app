@@ -22,4 +22,4 @@ jobs:
               chmod 400 secret.pem
 
               # Copy the Python Dist to remote server
-              scp -o StrictHostKeyChecking=no -i secret.pem ./foo "$USERNAME"@"$HOST":/home/ubuntu
+              scp -o StrictHostKeyChecking=no -i secret.pem ./foo $USERNAME@$HOST:/home/ubuntu
