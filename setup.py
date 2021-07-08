@@ -1,9 +1,15 @@
 #!/bin/env python
 
+import os
 import setuptools
 
-with open('./newsletter_automation/README.md', 'r', encoding='utf=8') as fh:
-    long_description = fh.read()
+if os.path.exists('./newsletter_automation/README.md'):
+    with open('./newsletter_automation/README.md', 'r', encoding='utf=8') as fh:
+        long_description = fh.read()
+else:
+    long_description = """
+    This project is to automate the process of creating the weekly Qxf2 newsletter. We take the URLs posted on the Skype channel as input and create a MailChimp    campaign.
+    """
 
 setuptools.setup(
         name = 'newsletter_automation',
