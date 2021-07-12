@@ -1,0 +1,20 @@
+name: Create a Python Module
+on:
+  push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Create a Python module
+      run: |
+              # Pull the changes from newsletter automation sub-module
+              git submodule update --recursive
+
+              # Create a Python Module
+              python --version
+              python setup.py sdist
