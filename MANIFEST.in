@@ -1,9 +1,9 @@
-recursive-include  qxf2_newsletter_app/newsletter_automation/ *
-recursive-include  qxf2_newsletter_app/newsletter_automation/conf *
-recursive-include  qxf2_newsletter_app/newsletter_automation/helpers *
-recursive-include  qxf2_newsletter_app/newsletter_automation/newsletter *
-recursive-include  qxf2_newsletter_app/newsletter_automation/newsletter/templates *
-exclude qxf2_newsletter_app/newsletter_automation/LICENSE
-exclude qxf2_newsletter_app/newsletter_automation/requirements.txt
+recursive-include  newsletter_generation/ *
+recursive-include  newsletter_generation/conf *
+recursive-include  newsletter_generation/helpers *
+recursive-include  newsletter_generation/newsletter *
+recursive-include  newsletter_generation/newsletter/templates *
+exclude newsletter_generation/LICENSE
+exclude newsletter_generation/requirements.txt
 global-exclude *.py[cod]
 
